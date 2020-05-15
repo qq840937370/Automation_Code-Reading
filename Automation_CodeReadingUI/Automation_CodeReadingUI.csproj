@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FD775AF-5A25-4800-AC76-7A827AF562A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Automation_CodeReadingUI</RootNamespace>
+    <AssemblyName>Automation_CodeReadingUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet, Version=19.11.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <HintPath>..\packages\HalconDotNet.19.11.0\lib\net35\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="hdevenginedotnet, Version=19.11.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <HintPath>..\packages\HDevEngineDotNet.19.11.0.1\lib\net35\hdevenginedotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="history_DataSet.cs">
+      <DependentUpon>history_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="history_DataSet.Designer.cs" />
+    <Compile Include="history_DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>history_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIScenario2\UI-About_Scenario2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIScenario2\UI-About_Scenario2.Designer.cs">
+      <DependentUpon>UI-About_Scenario2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIScenario2\UI-History_Scenario2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIScenario2\UI-History_Scenario2.Designer.cs">
+      <DependentUpon>UI-History_Scenario2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIScenario2\UI-Login_Scenario2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIScenario2\UI-Login_Scenario2.Designer.cs">
+      <DependentUpon>UI-Login_Scenario2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIScenario2\UI-MainForm_Scenario2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIScenario2\UI-MainForm_Scenario2.Designer.cs">
+      <DependentUpon>UI-MainForm_Scenario2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIScenario2\UI-Registered_Scenario2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIScenario2\UI-Registered_Scenario2.Designer.cs">
+      <DependentUpon>UI-Registered_Scenario2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UIScenario2\UI-About_Scenario2.resx">
+      <DependentUpon>UI-About_Scenario2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIScenario2\UI-History_Scenario2.resx">
+      <DependentUpon>UI-History_Scenario2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIScenario2\UI-Login_Scenario2.resx">
+      <DependentUpon>UI-Login_Scenario2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIScenario2\UI-MainForm_Scenario2.resx">
+      <DependentUpon>UI-MainForm_Scenario2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIScenario2\UI-Registered_Scenario2.resx">
+      <DependentUpon>UI-Registered_Scenario2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="history_DataSet.xsc">
+      <DependentUpon>history_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="history_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>history_DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="history_DataSet.xss">
+      <DependentUpon>history_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\847d73ce099e4332af5ce8a1ef6df743.jpeg" />
+    <Content Include="Image\bitbug48.ico" />
+    <Content Include="Image\bitbug64.ico" />
+    <Content Include="Image\help.png" />
+    <Content Include="Image\huashishuzi.png" />
+    <Content Include="Image\openImg.png" />
+    <Content Include="Image\saveAs.png" />
+    <Content Include="Image\saveProject.png" />
+    <Content Include="Image\Setting.png" />
+    <Content Include="Image\video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Automation_CodeReadingBLL\Automation_CodeReadingBLL.csproj">
+      <Project>{97be2810-caaa-47a3-abab-b5d3219f6b1a}</Project>
+      <Name>Automation_CodeReadingBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Automation_CodeReadingModel\Automation_CodeReadingModel.csproj">
+      <Project>{99a599c5-1181-4799-b10a-dc1aa20e808a}</Project>
+      <Name>Automation_CodeReadingModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
